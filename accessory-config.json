@@ -4,6 +4,7 @@
     "apiroute": "https://www.mynexia.com/mobile/",
     "houseId": "555555",
     "thermostatIndex": 0,
+    "xZoneId": 0,
     "xMobileId": "111111",
     "xApiKey": "fffffffffffffffffffffffffffffffff",
     "manufacturer": "Doesn't Matter",
