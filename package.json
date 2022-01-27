@@ -1,6 +1,6 @@
 {
   "displayName": "Nexia & American Standard Thermostat with Zone Support",
-  "name": "homebridge-nexia-as-thermostat-zones",
+  "name": "homebridge-nexia-as-thermostat",
   "version": "1.0.0",
   "description": "Homebridge Nexia and American Standard plugin with support for multiple zones",
   "main": "dist/accessory.js",
