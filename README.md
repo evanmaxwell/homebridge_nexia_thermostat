@@ -12,7 +12,7 @@ You need another npm module, nexia-api, to manually connect to the MyNexia API a
 Open a terminal or SSH in to your server and install the npm module:
 $ sudo npm install -g @cdmnky/nexia-api
 (I did this and steps 5 & 6 in a Virtual Machine I was going to throw away, so I didn't care where it went. YMMV though.)
-## 4. Activate a new mobile device on MyNexia.com and get HouseId
+## 4. Activate a new mobile device on MyNexia.com or ASAirHome.com and get HouseId
 Homebridge uses the same API as Nexia's mobile apps, so to start using it we need to register a new "mobile" device on MyNexia.com. Open MyNexia.com and log in using the same credentials you used on your mobile app.
 On the left side, there is a picture of a house and an "Edit" button to edit your home.
 - Click Edit
