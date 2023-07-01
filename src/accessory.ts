@@ -225,8 +225,8 @@ class NexiaThermostat {
       "rawScale": rawScale,
       "scale": convertedScale,
       "temperature": this.convertTemperature(convertedScale, this.currentTemperatureScale, rawTemperature),
-      "heatingSetpoint": this.convertTemperature(convertedScale, this.currentTemperatureScale, rawHeatingSetPoint),
-      "coolingSetpoint": this.convertTemperature(convertedScale, this.currentTemperatureScale, rawCoolingSetPoint),
+      ...(rawHeatingSetPoint !== 0 ? { "heatingSetpoint": this.convertTemperature(convertedScale, this.currentTemperatureScale, rawHeatingSetPoint) } : {}),
+      ...(rawCoolingSetPoint !== 0 ? { "coolingSetpoint": this.convertTemperature(convertedScale, this.currentTemperatureScale, rawCoolingSetPoint) } : {}),
       "targetTemperature": targetTemperature,
       "zoneModelUrl": zoneModeUrl,
       "setPointUrl": setPointUrl
