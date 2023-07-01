@@ -108,7 +108,6 @@ class NexiaThermostat {
     this.zoneModeMap.set(this.Characteristic.TargetHeatingCoolingState.OFF, "OFF");
     this.zoneModeMap.set(this.Characteristic.TargetHeatingCoolingState.HEAT, "HEAT");
     this.zoneModeMap.set(this.Characteristic.TargetHeatingCoolingState.COOL, "COOL");
-    this.zoneModeMap.set(this.Characteristic.TargetHeatingCoolingState.AUTO, "AUTO");
 
 
     this.scaleMap = new Map();
@@ -210,15 +209,6 @@ class NexiaThermostat {
     const rawTemperature = rawData.temperature;
     const rawHeatingSetPoint = rawData.heating_setpoint;
     const rawCoolingSetPoint = rawData.cooling_setpoint;
-    if (rawMode == 'AUTO') { //Special handling for auto
-      mappedMode = this.Characteristic.CurrentHeatingCoolingState.HEAT; //default to heat for now.
-      if (rawTemperature < rawHeatingSetPoint) {
-        mappedMode = this.Characteristic.CurrentHeatingCoolingState.HEAT;
-      } 
-      if (rawTemperature > rawCoolingSetPoint) {
-        mappedMode = this.Characteristic.CurrentHeatingCoolingState.COOL;
-      }
-    }
     
     let targetTemperature;
 
